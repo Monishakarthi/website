@@ -108,14 +108,48 @@ body {
   bottom: 20px;
   right: 20px;
 }
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
 
-/* Responsive (Mobile) */
+
+/* 📱 Responsive Fixes for Mobile */
 @media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 40px 20px;
   }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
+
+  
 
   .hero-title {
     font-size: 32px;
@@ -130,12 +164,11 @@ body {
     justify-content: center;
   }
 
-  .hero-image {
-    margin-top: 40px;
-  }
+  
 
   .badge {
     font-size: 12px;
     padding: 8px 14px;
   }
 }
+
