@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #ff2b55;
+      --dark: #111;
+      --muted: #666;
+      --bg: #fff;
+      --container: 1200px;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--dark);
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    .btn-header {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: #f6f3f3;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 0;
+      gap: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: var(--primary);
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 30px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #f6efef;
+    }
+
+    .btn-outline {
+      background: #f0e6e6;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .hero-stats .rating {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .hero-stats .created {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .hero-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-img img {
+      max-width: 500px;
+      border-radius: 50px;
+    }
+
+    /* FEATURES (What You Get) */
+    .features {
+      text-align: center;
+      padding: 80px 0;
+      background: #fafafa;
+    }
+
+    .features h2 {
+      font-size: 36px;
+      margin-bottom: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+    }
+
+    .features h2 span {
+      color: var(--primary);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+   <header>
+    <div class="logo">
+      <img src="c:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-03 172815.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </nav>
+    <button class="btn-header">Get A Quote</button>
+  </header>
+
+  <!-- HERO -->
+  <div class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Your Resume <span>Deserves A Yes</span> Let’s Make It Happen</h1>
+        <p>If your resume isn’t getting responses, it’s time for an upgrade. Get an ATS-optimized resume crafted by HR experts to help you land more interviews. Our resumes are designed to get your foot in the door and place your name at the top of the shortlist.</p>
+        
+        <div class="hero-buttons">
+          <button class="btn btn-outline">RESUME PACKAGES</button>
+          <button class="btn btn-primary">CONTACT US</button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="rating">⭐ 4.9 Instructor Rating</div>
+          <div class="created">260+ Online Resumes Created</div>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="C:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-04 102119.png">
+      </div>
+    </section>
+  </div>
+
+  <!-- FEATURES (What You Get) -->
+   <section class="features">
+    <h2>What You Get</h2>
+    <div class="container">
+      <h2>You’re Not Just <span>Another Applicant</span> And Your Resume Shouldn’t Look Like One</h2>
+      
+      <div class="card-grid">
+        <div class="card">
+          <img src="C:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-04 104517.png">
+          <h3>A Resume Format That Gets You Interviews</h3>
+          <p>Get a professionally written, keyword-optimized resume that lands in recruiter inboxes.</p>
+        </div>
+        <div class="card">
+          <img src="C:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-04 104458.png">
+          <h3>A Cover Letter Style That Stands Out Strong</h3>
+          <p>Stand out with a cover letter that speaks directly to the role and reflects your strengths.</p>
+        </div>
+        <div class="card">
+          <img src="C:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-04 104507.png">
+          <h3>A LinkedIn Profile That Works For You</h3>
+          <p>Attract the right eyes, start conversations, and show up in recruiter searches.</p>
+        </div>
+        <div class="card">
+          <img src="C:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-04 104532.png">
+          <h3>An Interview Strategy That Builds Confidence</h3>
+          <p>Interview preparation with real HR professionals so you speak clearly and confidently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 ResumePro. All rights reserved.
+  </footer>
+
+</body>
+</html>

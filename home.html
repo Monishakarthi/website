@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Desktop Navigation Menu</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+    }
+
+    /* Header Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 20px 100px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-item:hover .nav-text {
+      color: #007bff;
+    }
+
+    .nav-icon i {
+      color: black;
+      font-size: 18px;
+    }
+
+    .nav-text {
+      font-weight: 500;
+      font-size: 16px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .cta-btn {
+      background: #f05454;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #a31a1a;
+    }
+
+    /* Dummy Hero Section */
+    .hero {
+      margin-top: 120px;
+      padding: 100px;
+      text-align: center;
+      background: #e9f1ff;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Navbar -->
+  <header>
+    <div class="logo">
+      <img src="c:\Users\P.gopinath\Pictures\Screenshots\Screenshot 2025-10-03 172815.png" alt="Logo">
+    </div>
+
+    <ul class="nav-list">
+      <li class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+        <span class="nav-text">Home</span>
+      </li>
+
+      <li class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-circle-info"></i></span>
+        <span class="nav-text">About Us</span>
+      </li>
+
+      <li class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-gears"></i></span>
+        <span class="nav-text">Our Services</span>
+      </li>
+
+      <li class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-tag"></i></span>
+        <span class="nav-text">Pricing</span>
+      </li>
+
+      <li class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-comment"></i></span>
+        <span class="nav-text">FAQ</span>
+      </li>
+    </ul>
+
+    <button class="cta-btn">CONTACT US</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Our Website</h1>
+    <p>Experience the best services designed for your growth.</p>
+    <button class="cta-btn">Get Started</button>
+  </section>
+
+</body>
+</html>
